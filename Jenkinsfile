@@ -19,6 +19,6 @@ node {
    }
    stage ('deploy'){
    echo 'deployment started'
-       sh label: '', script: 'cp /var/lib/jenkins/workspace/newpipeline/target/*.war /opt/apache-tomcat-8.5.47/webapps'
+       sh label: '', script: 'sudo cp /var/lib/jenkins/workspace/newpipeline/target/*.war /opt/apache-tomcat-8.5.47/webapps'
    }
 }
