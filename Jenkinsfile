@@ -17,10 +17,6 @@ node {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
-    stage('artifact') {
-      
-      archive 'target/*.war'
-   }
    stage ('deploy'){
    echo 'deployment started'
        sh label: '', script: 'cp /var/lib/jenkins/workspace/${env.JOB_NAME}/target/*.war /opt/apache-tomcat-8.5.47/webapps'
