@@ -2,7 +2,7 @@ node {
    def mvnHome
    stage('getscm') { // for display purposes
       // Get some code from a GitHub repository
-      git 'https://github.com/ybmadhu/spring3-mv...
+      git 'https://github.com/chetanshell/Jenkinsbuild.git'
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
