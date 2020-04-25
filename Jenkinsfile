@@ -6,12 +6,12 @@ node {
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
-      // M2_HOME = tool 'Maven'
+      M2_HOME = tool 'Maven'
    }
    stage('Build') {
       // Run the maven build
       if (isUnix()) {
-         sh "'${M2_HOME}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+         sh "`${M2_HOME}/bin/mvn` -Dmaven.test.failure.ignore clean package"
       } else {
       echo 'this is build maven artifact'
          bat(/"${M2_HOME}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
@@ -19,6 +19,6 @@ node {
    }
    stage ('deploy'){
    echo 'deployment started'
-       sh label: '', script: 'sudo cp /var/lib/jenkins/workspace/newpipeline/target/*.war /opt/apache-tomcat-8.5.47/webapps'
+       sh "cp /var/lib/jenkins/workspace/${ITEM_FULL_NAME}/target/*.war /root/apache-tomcat-8.5.54/webapps"
    }
 }
