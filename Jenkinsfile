@@ -11,7 +11,7 @@ node {
    stage('Build') {
       // Run the maven build
       if (isUnix()) {
-           sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+           sh "'${M2_HOME}/bin/mvn' -Dmaven.test.failure.ignore clean package"
          //sh "`${M2_HOME}/bin/mvn` package"
       } else {
       echo 'this is build maven artifact'
