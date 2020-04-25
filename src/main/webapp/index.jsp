@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Jenkins Successfully Deloyed file to Tomcat with GitWebhooks fixed...!</h2>
+<h2>Jenkins Successfully Deloyed...!</h2>
 </body>
 </html>
