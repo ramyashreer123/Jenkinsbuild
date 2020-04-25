@@ -11,11 +11,16 @@ node {
    stage('Build') {
       // Run the maven build
       if (isUnix()) {
-         sh "`${M2_HOME}/bin/mvn` package"
+           sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+         //sh "`${M2_HOME}/bin/mvn` package"
       } else {
       echo 'this is build maven artifact'
          bat(/"${M2_HOME}\bin\mvn" -Dmaven.test.failure.ignore package/)
       }
+   }
+   stage('artifact') {
+      
+      archive 'target/*.war'
    }
    stage ('deploy'){
    echo 'deployment started'
