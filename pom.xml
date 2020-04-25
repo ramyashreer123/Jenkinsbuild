@@ -17,7 +17,7 @@
   </dependencies>
   <distributionManagement>
    <snapshotRepository>
-      <id>JenkinsWar</id>
+      <id>JenkinsWar1</id>
       <url>http://18.191.106.124:8082/repository/Jenkinswar-snap/</url>
    </snapshotRepository>
 </distributionManagement>
