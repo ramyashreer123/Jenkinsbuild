@@ -18,14 +18,6 @@ node {
          bat(/"${M2_HOME}\bin\mvn" -Dmaven.test.failure.ignore package/)
       }
    }
-   stage ('Testing Stage') {
-
-            steps {
-                withMaven(maven : 'M2_HOME') {
-                    sh 'mvn test'
-                }
-            }
-        }
    stage ('deploy'){
    echo 'deployment started'
        sh "cp /var/lib/jenkins/workspace/${ITEM_FULL_NAME}/target/*.war /root/apache-tomcat-8.5.54/webapps"
