@@ -11,7 +11,7 @@ node {
    stage('Build') {
       // Run the maven build
       if (isUnix()) {
-         sh "`${M2_HOME}/bin/mvn` -Dmaven.test.failure.ignore package"
+         sh "`${M2_HOME}/bin/mvn` -Dmaven.test.failure.ignore deploy"
       } else {
       echo 'this is build maven artifact'
          bat(/"${M2_HOME}\bin\mvn" -Dmaven.test.failure.ignore package/)
