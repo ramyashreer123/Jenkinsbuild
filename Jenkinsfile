@@ -20,6 +20,6 @@ node {
    }
    stage ('deploy'){
    echo 'deployment started'
-       sh "sudo cp /var/lib/jenkins/workspace/buildpipeline/target/*.war /root/apache-tomcat-8.5.54/webapps"
+       sh "sudo cp /var/lib/jenkins/workspace/buildpipeline/target/*.war /opt/apache-tomcat-8.5.54/webapps"
    }
 }
