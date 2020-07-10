@@ -15,12 +15,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <distributionManagement>
-   <snapshotRepository>
-      <id>JenkinsWar1</id>
-      <url>http://3.23.88.6:8082/repository/Jenkinswar-snap/</url>
-   </snapshotRepository>
-</distributionManagement>
   <build>
     <finalName>JenkinsWar</finalName>
   </build>
