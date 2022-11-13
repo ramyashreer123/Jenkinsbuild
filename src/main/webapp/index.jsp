@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Jenkins Successfully Deployed and updated with new push for automatic build and deploy</h2>
+<h2>Jenkins Successfully Deployed/h2>
 </body>
 </html>
